@@ -25,6 +25,6 @@ int TransactionNode::getUnits()
 
 void TransactionNode::printData()
 {
-	cout << this->mData << " : " << this->mUnits << endl;
+	cout << "  " << this->mData << " : " << this->mUnits << endl;
 }
 

@@ -1,10 +1,15 @@
 #include "Node.h"
 
-Node::Node(string newData = "")
+Node::Node(string newData)
 {
 	this->mData = newData;
 	this->mpLeft = nullptr;
 	this->mpRight = nullptr;
+}
+
+Node::~Node()
+{
+	//nothing 
 }
 
 void Node::setData(string newData)

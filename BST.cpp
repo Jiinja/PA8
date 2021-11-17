@@ -77,7 +77,7 @@ void BST::insert(TransactionNode* pTree, TransactionNode* newNode)
 			}
 			else
 			{
-				insert(pTree, newNode);
+				insert((TransactionNode*)pTree->getRightPtr(), newNode);
 			}
 		}
 		else if (newNode->getUnits() < pTree->getUnits())
@@ -88,7 +88,7 @@ void BST::insert(TransactionNode* pTree, TransactionNode* newNode)
 			}
 			else
 			{
-				insert(pTree, newNode);
+				insert((TransactionNode*)pTree->getLeftPtr(), newNode);
 			}
 		}
 		else
