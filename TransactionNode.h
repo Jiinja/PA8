@@ -8,7 +8,7 @@ public:
 	~TransactionNode();
 	TransactionNode(string newData = "", int newUnits = 0);
 	void setUnits(int newUnits);
-	int getUnits();
+	int getUnits() const;
 	void printData();
 };
 

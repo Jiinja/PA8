@@ -5,12 +5,9 @@ TransactionNode::~TransactionNode()
 
 }
 
-TransactionNode::TransactionNode(string newData, int newUnits)
+TransactionNode::TransactionNode(string newData, int newUnits) : Node(newData)
 {
-	this->mData = newData;
 	this->mUnits = newUnits;
-	this->mpRight = nullptr;
-	this->mpLeft = nullptr;
 }
 
 void TransactionNode::setUnits(int newUnits)
@@ -18,7 +15,7 @@ void TransactionNode::setUnits(int newUnits)
 	this->mUnits = newUnits;
 }
 
-int TransactionNode::getUnits()
+int TransactionNode::getUnits() const
 {
 	return this->mUnits;
 }
