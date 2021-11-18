@@ -2,7 +2,7 @@
 
 BST::~BST()
 {
-	destroyTree(this->mpRoot);
+	chopTree(this->mpRoot);
 }
 
 BST::BST()
@@ -51,12 +51,12 @@ TransactionNode& BST::findLargest()
 	return *traverse;
 }
 
-void BST::destroyTree(Node* pTree)
+void BST::chopTree(Node* pTree)
 {
 	if (pTree != nullptr)
 	{
-		destroyTree(pTree->getLeftPtr());
-		destroyTree(pTree->getRightPtr());
+		chopTree(pTree->getLeftPtr());
+		chopTree(pTree->getRightPtr());
 		delete pTree;
 	}
 }

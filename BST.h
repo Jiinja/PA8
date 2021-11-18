@@ -13,7 +13,7 @@ public:
 	TransactionNode& findLargest();
 private:
 	Node* mpRoot;
-	void destroyTree(Node* pTree);
+	void chopTree(Node* pTree);
 	void insert(TransactionNode* pTree, TransactionNode* newNode);
 	void inOrderTraversal(Node* pTree);
 

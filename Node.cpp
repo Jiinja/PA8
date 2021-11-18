@@ -32,12 +32,12 @@ string Node::getData()
 	return this->mData;
 }
 
-Node* Node::getRightPtr()
+Node*& Node::getRightPtr()
 {
 	return this->mpRight;
 }
 
-Node* Node::getLeftPtr()
+Node*& Node::getLeftPtr()
 {
 	return this->mpLeft;
 }
